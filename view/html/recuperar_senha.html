@@ -1,30 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/recuperar_senha.css">
-    <title>Tela de recuperar senha</title>
-    
-   
-</head>
-<body style="background-color: rgb(3, 141, 35);" >
-    <h1 class="paragrafo">Recuperação de senha</h1>
-    <form id="formulario">
-    <div class="div_fundo">
-        <div class="campos">
-            <label>Email</label><br>
-            <input type="email" placeholder="emailexemplo@gmail.com"/><br>
-            <label>Nova senha</label><br>
-            <input type="password" placeholder="Senha"/><br>
-            <label>Confirmar senha</label><br>
-            <input type="password"/><br>
-
-            <button type="button" class="botao1" style="text-align: center;">Alterar senha</button>
-            <button type="button" class="botao2" style="text-align: center;">Voltar</button>
-        </div>
-    </div>  
-    </form>
-    
-</body>
+    <title>Recuperação de Senha</title>
+  </head>
+  <body>
+    <header>
+      <h1>Recuperar Senha</h1>
+    </header>
+    <main>
+      <form action="/recuperar-senha" method="post">
+        <fieldset>
+          <legend>Recuperar</legend>
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Digite seu email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="nova_senha" name="nova_senha" placeholder=" " required>
+            <label for="nova_senha">Nova senha</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder=" " required>
+            <label for="confirmar_senha">Confirmar senha</label>
+          </div>
+          <div>
+            <button type="submit">Alterar senha</button>
+          </div>
+        </fieldset>
+      </form>
+      <section>
+        <p>
+          Lembrou sua senha?
+          <a href="login.html">Voltar para login</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
