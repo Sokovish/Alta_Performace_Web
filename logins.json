@@ -1,0 +1,10 @@
+[
+    {
+        "usuario": "admin",
+        "senha": "admin"
+    },
+    {
+        "usuario": "abc",
+        "senha": "def"
+    }
+]

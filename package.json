@@ -1,21 +1,30 @@
 {
-  "name": "projeto-web",
+  "name": "node",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Repositório para o projeto Web.",
   "dependencies": {
     "@prisma/client": "^6.7.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "node-popup": "^0.1.14"
   },
   "devDependencies": {
     "nodemon": "^3.1.10",
     "prisma": "^6.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sokovish/Alta_Performace_Web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sokovish/Alta_Performace_Web/issues"
+  },
+  "homepage": "https://github.com/Sokovish/Alta_Performace_Web#readme"
 }

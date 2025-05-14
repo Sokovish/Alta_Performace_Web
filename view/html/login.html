@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Login</title>
-  </head>
-  <body>
-    <header>
-      <h1>Bem-vindo</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <title>Login</title>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo</h1>
+  </header>
 
-    <main>
-      <form action="/login" method="post">
-        <fieldset>
-          <legend>Login</legend>
+  <main>
+    <form id="login-form">
+      <fieldset>
+        <legend>Login</legend>
 
-          <div class="input-group">
-            <picture>
-              <source srcset="/utils/img/login-cadastro/user.webp" type="image/webp">
-              <img src="/utils/img/login-cadastro/user.png" alt="Boneco de login">
-            </picture>            
-          </div>
+        <div class="input-group">
+          <picture>
+            <source srcset="/utils/img/login-cadastro/user.webp" type="image/webp" />
+            <img src="/utils/img/login-cadastro/user.png" alt="Boneco de login" />
+          </picture>
+        </div>
 
-          <div class="input-group">
-            <input type="text" id="usuario" name="usuario" placeholder=" " required>
-            <label for="usuario">Digite seu usuário</label>
-          </div>
-          
-          <div class="input-group">
-            <input type="password" id="senha" name="senha" placeholder=" " required>
-            <label for="senha">Digite sua senha</label>
-          </div>
-          
-          <div>
-            <button type="submit">Entrar</button>
-          </div>
-        </fieldset>
-      </form>
-      
-      <section>
-        <p>
-          Ainda não possui uma conta?
-          <a href="cadastro.html">Cadastre-se</a>
-        </p>
-        <p>
-          Esqueceu sua senha?
-          <a href="recuperar_senha.html">Recuperar senha</a>
-        </p>
-      </section>
-    </main>
-    
-    <footer>
-      <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
-    </footer>
-  </body>
+        <div class="input-group">
+          <input type="text" id="usuario" name="usuario" placeholder=" " required />
+          <label for="usuario">Digite seu usuário</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="senha" name="senha" placeholder=" " required />
+          <label for="senha">Digite sua senha</label>
+        </div>
+
+        <div>
+          <button type="submit">Entrar</button>
+        </div>
+
+        <!-- ✅ Correct ID -->
+        <div class="errormsg">
+          <p id="error-msg" style="display: none; color: red;">Usuário ou senha inválidos</p>
+        </div>
+      </fieldset>
+    </form>
+
+    <section>
+      <p>
+        Ainda não possui uma conta?
+        <a href="cadastro.html">Cadastre-se</a>
+      </p>
+      <p>
+        Esqueceu sua senha?
+        <a href="recuperar_senha.html">Recuperar senha</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('login-form');
+      const errorMsg = document.getElementById('error-msg');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const usuario = form.usuario.value;
+        const senha = form.senha.value;
+
+        const res = await fetch('/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ usuario, senha })
+        });
+
+        if (!res.ok) {
+          errorMsg.style.display = 'block';
+        } else {
+          window.location.href = '/html/index.html';
+        }
+      });
+    });
+  </script>
+</body>
 </html>

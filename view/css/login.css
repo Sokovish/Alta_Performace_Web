@@ -206,4 +206,16 @@ footer {
     left: 10px;
     font-size: 0.8rem;
   }
+
+  .invisible {
+    display: none;
+    visibility: hidden;
+   }
+
+  .errormsg {
+    left: 10px;
+    color: red;
+    font-size: 0.8rem;
+  }
+  
 }
