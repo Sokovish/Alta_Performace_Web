@@ -12,3 +12,30 @@ model Teste {
   id   Int    @id @default(autoincrement())
   nome String
 }
+
+model Usuario {
+  id        Int    @id @default(autoincrement())
+  nome      String
+  sobrenome String
+  idade     Int
+  CPF       String @unique
+  email     String @unique
+  telefone  Int?
+}
+
+model Medico {
+  id        Int    @id @default(autoincrement())
+  nome      String
+  sobrenome String
+  idade     Int
+  CPF       String @unique
+  email     String @unique
+  CRM       String @unique
+  telefone  Int
+}
+
+model Gestor {
+  codigo    Int    @id @default(autoincrement())
+  nome      String
+  sobrenome String
+}

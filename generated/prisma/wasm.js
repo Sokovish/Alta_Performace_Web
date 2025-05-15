@@ -122,14 +122,49 @@ exports.Prisma.TesteScalarFieldEnum = {
   nome: 'nome'
 };
 
+exports.Prisma.UsuarioScalarFieldEnum = {
+  id: 'id',
+  nome: 'nome',
+  sobrenome: 'sobrenome',
+  idade: 'idade',
+  CPF: 'CPF',
+  email: 'email',
+  telefone: 'telefone'
+};
+
+exports.Prisma.MedicoScalarFieldEnum = {
+  id: 'id',
+  nome: 'nome',
+  sobrenome: 'sobrenome',
+  idade: 'idade',
+  CPF: 'CPF',
+  email: 'email',
+  CRM: 'CRM',
+  telefone: 'telefone'
+};
+
+exports.Prisma.GestorScalarFieldEnum = {
+  codigo: 'codigo',
+  nome: 'nome',
+  sobrenome: 'sobrenome'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  Teste: 'Teste'
+  Teste: 'Teste',
+  Usuario: 'Usuario',
+  Medico: 'Medico',
+  Gestor: 'Gestor'
 };
 
 /**
