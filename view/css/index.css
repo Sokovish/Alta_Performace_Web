@@ -1,4 +1,3 @@
-
 body {
     background-color: #bddbfa;
 }
@@ -47,10 +46,10 @@ nav {
 }
 .nav_item a {
     color: #1d1d1dad;
+    transition: all 0.3s ease-in-out;
 }
-.nav_item.active a {
-    color: #1d1d1d;
-    border-bottom: 3px solid;
+.nav_item a:hover {
+    color: #181818;
 }
 #mobile_btn {
     display: none;
