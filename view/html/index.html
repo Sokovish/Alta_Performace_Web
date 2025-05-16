@@ -12,45 +12,149 @@
 <body>
 
   <header>
-      <nav>
-        <div id="img_header">
-          <a href="index.html"><img src="/utils/img/farmacia.png" alt="Logo do site"></a>
-        </div>
-
-        <ul id="nav_list">
-          <li class="nav_item active"><a href="">Inicio</a></li>
-          <li class="nav_item"><a href="">Contato</a></li>
-          <li class="nav_item"><a href="">Sobre nós</a></li>
-          <div class="nav_item_login" id="login_cadastro">
-            <a href="/view/html/autenticacao/login.html">Login/Cadastro</a>
-          </div>    
-        </ul>
-        
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-      </nav>
-
-      <div id="mobile_menu">
-          <ul id="mobile_navlist">
-            <li class="nav_item"><a href="">Inicio</a></li>
-            <li class="nav_item"><a href="">Contato</a></li>
-            <li class="nav_item"><a href="">Sobre nós</a></li>
-            <div class="nav_item_login" id="login_cadastro_mobile">
-              <a href="/view/html/autenticacao/login.html">Login/Cadstro</a>
-            </div>    
-        </ul>
+    <nav>
+      <div id="img_header">
+        <a href="index.html"><img src="/utils/img/farmacia.png" alt="Logo do site"></a>
       </div>
+      <ul id="nav_list">
+        <li class="nav_item active"><a href="">Início</a></li>
+        <li class="nav_item"><a href="">Contato</a></li>
+        <li class="nav_item"><a href="">Sobre nós</a></li>
+        <div class="nav_item_login" id="login_cadastro">
+          <a href="/view/html/autenticacao/login.html">Login/Cadastro</a>
+        </div>    
+      </ul>
+      <button id="mobile_btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div id="mobile_menu">
+      <ul id="mobile_navlist">
+        <li class="nav_item"><a href="">Início</a></li>
+        <li class="nav_item"><a href="">Contato</a></li>
+        <li class="nav_item"><a href="">Sobre nós</a></li>
+        <div class="nav_item_login" id="login_cadastro_mobile">
+          <a href="/view/html/autenticacao/login.html">Login/Cadastro</a>
+        </div>    
+      </ul>
+    </div>
   </header>
 
   <main>
-      <section>
+    <section id="about">
+      <div class="container">
+        <h1>Bem-vindo a Sage Assistent</h1>
+        <p>
+          Somos uma plataforma que facilita o agendamento de consultas, conectando pacientes aos melhores médicos e hospitais parceiros. Nosso objetivo é trazer agilidade e segurança para o cuidado com sua saúde.
+        </p>
+        <a class="btn" href="/view/html/autenticacao/cadastro.html">Cadastre-se Agora</a>
+      </div>
+    </section>
 
-      </section>
+    <section id="partners">
+      <div class="container">
+        <h2>Hospitais Parceiros</h2>
+        <p>Conheça os hospitais e clínicas que colaboram conosco para oferecer um atendimento de excelência.</p>
+        <div class="partners-grid">
+          <div class="partner">
+            <img src="/utils/img/hospital1.svg" alt="IOM">
+            <p>Instituto de Olhos Maceió</p>
+          </div>
+          <div class="partner">
+            <img src="/utils/img/hospital2.png" alt="Clínica Vida">
+            <p>Clínica Vida</p>
+          </div>
+          <div class="partner">
+            <img src="/utils/img/hospital3.png" alt="Hospital Central">
+            <p>Hospital Central</p>
+          </div>
+          <div class="partner">
+            <img src="/utils/img/hospital4.png" alt="Hospital da Luz">
+            <p>Hospital da Luz</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2>Como Funciona</h2>
+        <div class="steps">
+          <div class="step">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Cadastre-se</h3>
+            <p>Crie seu perfil de forma simples e rápida.</p>
+          </div>
+          <div class="step">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Agende Consultas</h3>
+            <p>Escolha o médico e o hospital no horário que melhor se adapte à sua rotina.</p>
+          </div>
+          <div class="step">
+            <i class="fa-solid fa-hospital-user"></i>
+            <h3>Atendimento de Qualidade</h3>
+            <p>Receba atendimento com profissionais de referência e infraestrutura de ponta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <h2>O que nossos usuários dizem</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial">
+            <p>"Marcar minha consulta nunca foi tão fácil! A plataforma é intuitiva, e os hospitais parceiros oferecem um atendimento excepcional."</p>
+            <cite>- Ana Paula</cite>
+          </div>
+          <div class="testimonial">
+            <p>"Estou muito satisfeito com o MedAgend. Consegui agendar uma consulta em poucos minutos e o suporte foi excelente."</p>
+            <cite>- Carlos Eduardo</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <p>Tem dúvidas ou precisa de mais informações? Envie sua mensagem e nossa equipe responderá o mais breve possível.</p>
+        <form id="contact-form" action="/enviar-contato" method="post">
+          <div class="form-group">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Seu Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Sage Assistent - Todos os direitos reservados</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
   </footer>
+
   <script src="/view/js/index.js"></script>
+  <script>
+
+    $('.btn').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#how-it-works').offset().top
+      }, 800);
+    });
+  </script>
 </body>
 </html>
