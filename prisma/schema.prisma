@@ -9,10 +9,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Teste {
-    id Int @id @default(autoincrement())
-    nome String 
-}
+
 model Usuario {
   id         Int     @id  @default(autoincrement())
   nome       String
