@@ -1082,6 +1082,7 @@ export namespace Prisma {
     idade: number | null
     CPF: string | null
     email: string | null
+    senha: string | null
     telefone: bigint | null
   }
 
@@ -1092,6 +1093,7 @@ export namespace Prisma {
     idade: number | null
     CPF: string | null
     email: string | null
+    senha: string | null
     telefone: bigint | null
   }
 
@@ -1102,6 +1104,7 @@ export namespace Prisma {
     idade: number
     CPF: number
     email: number
+    senha: number
     telefone: number
     _all: number
   }
@@ -1126,6 +1129,7 @@ export namespace Prisma {
     idade?: true
     CPF?: true
     email?: true
+    senha?: true
     telefone?: true
   }
 
@@ -1136,6 +1140,7 @@ export namespace Prisma {
     idade?: true
     CPF?: true
     email?: true
+    senha?: true
     telefone?: true
   }
 
@@ -1146,6 +1151,7 @@ export namespace Prisma {
     idade?: true
     CPF?: true
     email?: true
+    senha?: true
     telefone?: true
     _all?: true
   }
@@ -1243,6 +1249,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha: string
     telefone: bigint | null
     _count: UsuarioCountAggregateOutputType | null
     _avg: UsuarioAvgAggregateOutputType | null
@@ -1272,6 +1279,7 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     telefone?: boolean
   }, ExtArgs["result"]["usuario"]>
 
@@ -1282,6 +1290,7 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     telefone?: boolean
   }, ExtArgs["result"]["usuario"]>
 
@@ -1292,6 +1301,7 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     telefone?: boolean
   }, ExtArgs["result"]["usuario"]>
 
@@ -1302,10 +1312,11 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     telefone?: boolean
   }
 
-  export type UsuarioOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "sobrenome" | "idade" | "CPF" | "email" | "telefone", ExtArgs["result"]["usuario"]>
+  export type UsuarioOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "sobrenome" | "idade" | "CPF" | "email" | "senha" | "telefone", ExtArgs["result"]["usuario"]>
 
   export type $UsuarioPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Usuario"
@@ -1317,6 +1328,7 @@ export namespace Prisma {
       idade: number
       CPF: string
       email: string
+      senha: string
       telefone: bigint | null
     }, ExtArgs["result"]["usuario"]>
     composites: {}
@@ -1747,6 +1759,7 @@ export namespace Prisma {
     readonly idade: FieldRef<"Usuario", 'Int'>
     readonly CPF: FieldRef<"Usuario", 'String'>
     readonly email: FieldRef<"Usuario", 'String'>
+    readonly senha: FieldRef<"Usuario", 'String'>
     readonly telefone: FieldRef<"Usuario", 'BigInt'>
   }
     
@@ -2143,6 +2156,7 @@ export namespace Prisma {
     idade: number | null
     CPF: string | null
     email: string | null
+    senha: string | null
     CRM: string | null
     telefone: bigint | null
   }
@@ -2154,6 +2168,7 @@ export namespace Prisma {
     idade: number | null
     CPF: string | null
     email: string | null
+    senha: string | null
     CRM: string | null
     telefone: bigint | null
   }
@@ -2165,6 +2180,7 @@ export namespace Prisma {
     idade: number
     CPF: number
     email: number
+    senha: number
     CRM: number
     telefone: number
     _all: number
@@ -2190,6 +2206,7 @@ export namespace Prisma {
     idade?: true
     CPF?: true
     email?: true
+    senha?: true
     CRM?: true
     telefone?: true
   }
@@ -2201,6 +2218,7 @@ export namespace Prisma {
     idade?: true
     CPF?: true
     email?: true
+    senha?: true
     CRM?: true
     telefone?: true
   }
@@ -2212,6 +2230,7 @@ export namespace Prisma {
     idade?: true
     CPF?: true
     email?: true
+    senha?: true
     CRM?: true
     telefone?: true
     _all?: true
@@ -2310,6 +2329,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha: string
     CRM: string
     telefone: bigint
     _count: MedicoCountAggregateOutputType | null
@@ -2340,6 +2360,7 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     CRM?: boolean
     telefone?: boolean
   }, ExtArgs["result"]["medico"]>
@@ -2351,6 +2372,7 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     CRM?: boolean
     telefone?: boolean
   }, ExtArgs["result"]["medico"]>
@@ -2362,6 +2384,7 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     CRM?: boolean
     telefone?: boolean
   }, ExtArgs["result"]["medico"]>
@@ -2373,11 +2396,12 @@ export namespace Prisma {
     idade?: boolean
     CPF?: boolean
     email?: boolean
+    senha?: boolean
     CRM?: boolean
     telefone?: boolean
   }
 
-  export type MedicoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "sobrenome" | "idade" | "CPF" | "email" | "CRM" | "telefone", ExtArgs["result"]["medico"]>
+  export type MedicoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "sobrenome" | "idade" | "CPF" | "email" | "senha" | "CRM" | "telefone", ExtArgs["result"]["medico"]>
 
   export type $MedicoPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Medico"
@@ -2389,6 +2413,7 @@ export namespace Prisma {
       idade: number
       CPF: string
       email: string
+      senha: string
       CRM: string
       telefone: bigint
     }, ExtArgs["result"]["medico"]>
@@ -2820,6 +2845,7 @@ export namespace Prisma {
     readonly idade: FieldRef<"Medico", 'Int'>
     readonly CPF: FieldRef<"Medico", 'String'>
     readonly email: FieldRef<"Medico", 'String'>
+    readonly senha: FieldRef<"Medico", 'String'>
     readonly CRM: FieldRef<"Medico", 'String'>
     readonly telefone: FieldRef<"Medico", 'BigInt'>
   }
@@ -3210,18 +3236,24 @@ export namespace Prisma {
     codigo: number | null
     nome: string | null
     sobrenome: string | null
+    email: string | null
+    senha: string | null
   }
 
   export type GestorMaxAggregateOutputType = {
     codigo: number | null
     nome: string | null
     sobrenome: string | null
+    email: string | null
+    senha: string | null
   }
 
   export type GestorCountAggregateOutputType = {
     codigo: number
     nome: number
     sobrenome: number
+    email: number
+    senha: number
     _all: number
   }
 
@@ -3238,18 +3270,24 @@ export namespace Prisma {
     codigo?: true
     nome?: true
     sobrenome?: true
+    email?: true
+    senha?: true
   }
 
   export type GestorMaxAggregateInputType = {
     codigo?: true
     nome?: true
     sobrenome?: true
+    email?: true
+    senha?: true
   }
 
   export type GestorCountAggregateInputType = {
     codigo?: true
     nome?: true
     sobrenome?: true
+    email?: true
+    senha?: true
     _all?: true
   }
 
@@ -3343,6 +3381,8 @@ export namespace Prisma {
     codigo: number
     nome: string
     sobrenome: string
+    email: string
+    senha: string
     _count: GestorCountAggregateOutputType | null
     _avg: GestorAvgAggregateOutputType | null
     _sum: GestorSumAggregateOutputType | null
@@ -3368,27 +3408,35 @@ export namespace Prisma {
     codigo?: boolean
     nome?: boolean
     sobrenome?: boolean
+    email?: boolean
+    senha?: boolean
   }, ExtArgs["result"]["gestor"]>
 
   export type GestorSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     codigo?: boolean
     nome?: boolean
     sobrenome?: boolean
+    email?: boolean
+    senha?: boolean
   }, ExtArgs["result"]["gestor"]>
 
   export type GestorSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     codigo?: boolean
     nome?: boolean
     sobrenome?: boolean
+    email?: boolean
+    senha?: boolean
   }, ExtArgs["result"]["gestor"]>
 
   export type GestorSelectScalar = {
     codigo?: boolean
     nome?: boolean
     sobrenome?: boolean
+    email?: boolean
+    senha?: boolean
   }
 
-  export type GestorOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"codigo" | "nome" | "sobrenome", ExtArgs["result"]["gestor"]>
+  export type GestorOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"codigo" | "nome" | "sobrenome" | "email" | "senha", ExtArgs["result"]["gestor"]>
 
   export type $GestorPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Gestor"
@@ -3397,6 +3445,8 @@ export namespace Prisma {
       codigo: number
       nome: string
       sobrenome: string
+      email: string
+      senha: string
     }, ExtArgs["result"]["gestor"]>
     composites: {}
   }
@@ -3823,6 +3873,8 @@ export namespace Prisma {
     readonly codigo: FieldRef<"Gestor", 'Int'>
     readonly nome: FieldRef<"Gestor", 'String'>
     readonly sobrenome: FieldRef<"Gestor", 'String'>
+    readonly email: FieldRef<"Gestor", 'String'>
+    readonly senha: FieldRef<"Gestor", 'String'>
   }
     
 
@@ -4205,6 +4257,7 @@ export namespace Prisma {
     idade: 'idade',
     CPF: 'CPF',
     email: 'email',
+    senha: 'senha',
     telefone: 'telefone'
   };
 
@@ -4218,6 +4271,7 @@ export namespace Prisma {
     idade: 'idade',
     CPF: 'CPF',
     email: 'email',
+    senha: 'senha',
     CRM: 'CRM',
     telefone: 'telefone'
   };
@@ -4228,7 +4282,9 @@ export namespace Prisma {
   export const GestorScalarFieldEnum: {
     codigo: 'codigo',
     nome: 'nome',
-    sobrenome: 'sobrenome'
+    sobrenome: 'sobrenome',
+    email: 'email',
+    senha: 'senha'
   };
 
   export type GestorScalarFieldEnum = (typeof GestorScalarFieldEnum)[keyof typeof GestorScalarFieldEnum]
@@ -4296,6 +4352,7 @@ export namespace Prisma {
     idade?: IntFilter<"Usuario"> | number
     CPF?: StringFilter<"Usuario"> | string
     email?: StringFilter<"Usuario"> | string
+    senha?: StringFilter<"Usuario"> | string
     telefone?: BigIntNullableFilter<"Usuario"> | bigint | number | null
   }
 
@@ -4306,6 +4363,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     telefone?: SortOrderInput | SortOrder
   }
 
@@ -4319,6 +4377,7 @@ export namespace Prisma {
     nome?: StringFilter<"Usuario"> | string
     sobrenome?: StringFilter<"Usuario"> | string
     idade?: IntFilter<"Usuario"> | number
+    senha?: StringFilter<"Usuario"> | string
     telefone?: BigIntNullableFilter<"Usuario"> | bigint | number | null
   }, "id" | "CPF" | "email">
 
@@ -4329,6 +4388,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     telefone?: SortOrderInput | SortOrder
     _count?: UsuarioCountOrderByAggregateInput
     _avg?: UsuarioAvgOrderByAggregateInput
@@ -4347,6 +4407,7 @@ export namespace Prisma {
     idade?: IntWithAggregatesFilter<"Usuario"> | number
     CPF?: StringWithAggregatesFilter<"Usuario"> | string
     email?: StringWithAggregatesFilter<"Usuario"> | string
+    senha?: StringWithAggregatesFilter<"Usuario"> | string
     telefone?: BigIntNullableWithAggregatesFilter<"Usuario"> | bigint | number | null
   }
 
@@ -4360,6 +4421,7 @@ export namespace Prisma {
     idade?: IntFilter<"Medico"> | number
     CPF?: StringFilter<"Medico"> | string
     email?: StringFilter<"Medico"> | string
+    senha?: StringFilter<"Medico"> | string
     CRM?: StringFilter<"Medico"> | string
     telefone?: BigIntFilter<"Medico"> | bigint | number
   }
@@ -4371,6 +4433,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     CRM?: SortOrder
     telefone?: SortOrder
   }
@@ -4386,6 +4449,7 @@ export namespace Prisma {
     nome?: StringFilter<"Medico"> | string
     sobrenome?: StringFilter<"Medico"> | string
     idade?: IntFilter<"Medico"> | number
+    senha?: StringFilter<"Medico"> | string
     telefone?: BigIntFilter<"Medico"> | bigint | number
   }, "id" | "CPF" | "email" | "CRM">
 
@@ -4396,6 +4460,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     CRM?: SortOrder
     telefone?: SortOrder
     _count?: MedicoCountOrderByAggregateInput
@@ -4415,6 +4480,7 @@ export namespace Prisma {
     idade?: IntWithAggregatesFilter<"Medico"> | number
     CPF?: StringWithAggregatesFilter<"Medico"> | string
     email?: StringWithAggregatesFilter<"Medico"> | string
+    senha?: StringWithAggregatesFilter<"Medico"> | string
     CRM?: StringWithAggregatesFilter<"Medico"> | string
     telefone?: BigIntWithAggregatesFilter<"Medico"> | bigint | number
   }
@@ -4426,27 +4492,35 @@ export namespace Prisma {
     codigo?: IntFilter<"Gestor"> | number
     nome?: StringFilter<"Gestor"> | string
     sobrenome?: StringFilter<"Gestor"> | string
+    email?: StringFilter<"Gestor"> | string
+    senha?: StringFilter<"Gestor"> | string
   }
 
   export type GestorOrderByWithRelationInput = {
     codigo?: SortOrder
     nome?: SortOrder
     sobrenome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
   }
 
   export type GestorWhereUniqueInput = Prisma.AtLeast<{
     codigo?: number
+    email?: string
     AND?: GestorWhereInput | GestorWhereInput[]
     OR?: GestorWhereInput[]
     NOT?: GestorWhereInput | GestorWhereInput[]
     nome?: StringFilter<"Gestor"> | string
     sobrenome?: StringFilter<"Gestor"> | string
-  }, "codigo">
+    senha?: StringFilter<"Gestor"> | string
+  }, "codigo" | "email">
 
   export type GestorOrderByWithAggregationInput = {
     codigo?: SortOrder
     nome?: SortOrder
     sobrenome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
     _count?: GestorCountOrderByAggregateInput
     _avg?: GestorAvgOrderByAggregateInput
     _max?: GestorMaxOrderByAggregateInput
@@ -4461,6 +4535,8 @@ export namespace Prisma {
     codigo?: IntWithAggregatesFilter<"Gestor"> | number
     nome?: StringWithAggregatesFilter<"Gestor"> | string
     sobrenome?: StringWithAggregatesFilter<"Gestor"> | string
+    email?: StringWithAggregatesFilter<"Gestor"> | string
+    senha?: StringWithAggregatesFilter<"Gestor"> | string
   }
 
   export type UsuarioCreateInput = {
@@ -4469,6 +4545,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha?: string
     telefone?: bigint | number | null
   }
 
@@ -4479,6 +4556,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha?: string
     telefone?: bigint | number | null
   }
 
@@ -4488,6 +4566,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     telefone?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   }
 
@@ -4498,6 +4577,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     telefone?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   }
 
@@ -4508,6 +4588,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha?: string
     telefone?: bigint | number | null
   }
 
@@ -4517,6 +4598,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     telefone?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   }
 
@@ -4527,6 +4609,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     telefone?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   }
 
@@ -4536,6 +4619,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha?: string
     CRM: string
     telefone: bigint | number
   }
@@ -4547,6 +4631,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha?: string
     CRM: string
     telefone: bigint | number
   }
@@ -4557,6 +4642,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     CRM?: StringFieldUpdateOperationsInput | string
     telefone?: BigIntFieldUpdateOperationsInput | bigint | number
   }
@@ -4568,6 +4654,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     CRM?: StringFieldUpdateOperationsInput | string
     telefone?: BigIntFieldUpdateOperationsInput | bigint | number
   }
@@ -4579,6 +4666,7 @@ export namespace Prisma {
     idade: number
     CPF: string
     email: string
+    senha?: string
     CRM: string
     telefone: bigint | number
   }
@@ -4589,6 +4677,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     CRM?: StringFieldUpdateOperationsInput | string
     telefone?: BigIntFieldUpdateOperationsInput | bigint | number
   }
@@ -4600,6 +4689,7 @@ export namespace Prisma {
     idade?: IntFieldUpdateOperationsInput | number
     CPF?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
     CRM?: StringFieldUpdateOperationsInput | string
     telefone?: BigIntFieldUpdateOperationsInput | bigint | number
   }
@@ -4607,40 +4697,54 @@ export namespace Prisma {
   export type GestorCreateInput = {
     nome: string
     sobrenome: string
+    email: string
+    senha?: string
   }
 
   export type GestorUncheckedCreateInput = {
     codigo?: number
     nome: string
     sobrenome: string
+    email: string
+    senha?: string
   }
 
   export type GestorUpdateInput = {
     nome?: StringFieldUpdateOperationsInput | string
     sobrenome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
   }
 
   export type GestorUncheckedUpdateInput = {
     codigo?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     sobrenome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
   }
 
   export type GestorCreateManyInput = {
     codigo?: number
     nome: string
     sobrenome: string
+    email: string
+    senha?: string
   }
 
   export type GestorUpdateManyMutationInput = {
     nome?: StringFieldUpdateOperationsInput | string
     sobrenome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
   }
 
   export type GestorUncheckedUpdateManyInput = {
     codigo?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     sobrenome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -4691,6 +4795,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     telefone?: SortOrder
   }
 
@@ -4707,6 +4812,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     telefone?: SortOrder
   }
 
@@ -4717,6 +4823,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     telefone?: SortOrder
   }
 
@@ -4793,6 +4900,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     CRM?: SortOrder
     telefone?: SortOrder
   }
@@ -4810,6 +4918,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     CRM?: SortOrder
     telefone?: SortOrder
   }
@@ -4821,6 +4930,7 @@ export namespace Prisma {
     idade?: SortOrder
     CPF?: SortOrder
     email?: SortOrder
+    senha?: SortOrder
     CRM?: SortOrder
     telefone?: SortOrder
   }
@@ -4851,6 +4961,8 @@ export namespace Prisma {
     codigo?: SortOrder
     nome?: SortOrder
     sobrenome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
   }
 
   export type GestorAvgOrderByAggregateInput = {
@@ -4861,12 +4973,16 @@ export namespace Prisma {
     codigo?: SortOrder
     nome?: SortOrder
     sobrenome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
   }
 
   export type GestorMinOrderByAggregateInput = {
     codigo?: SortOrder
     nome?: SortOrder
     sobrenome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
   }
 
   export type GestorSumOrderByAggregateInput = {

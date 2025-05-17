@@ -124,6 +124,7 @@ exports.Prisma.UsuarioScalarFieldEnum = {
   idade: 'idade',
   CPF: 'CPF',
   email: 'email',
+  senha: 'senha',
   telefone: 'telefone'
 };
 
@@ -134,6 +135,7 @@ exports.Prisma.MedicoScalarFieldEnum = {
   idade: 'idade',
   CPF: 'CPF',
   email: 'email',
+  senha: 'senha',
   CRM: 'CRM',
   telefone: 'telefone'
 };
@@ -141,7 +143,9 @@ exports.Prisma.MedicoScalarFieldEnum = {
 exports.Prisma.GestorScalarFieldEnum = {
   codigo: 'codigo',
   nome: 'nome',
-  sobrenome: 'sobrenome'
+  sobrenome: 'sobrenome',
+  email: 'email',
+  senha: 'senha'
 };
 
 exports.Prisma.SortOrder = {
