@@ -8,19 +8,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Teste {
-  id   Int    @id @default(autoincrement())
-  nome String
-}
-
 model Usuario {
-  id        Int    @id @default(autoincrement())
+  id        Int     @id @default(autoincrement())
   nome      String
   sobrenome String
   idade     Int
-  CPF       String @unique
-  email     String @unique
-  telefone  Int?
+  cpf       String  @unique
+  email     String  @unique
+  telefone  BigInt?
 }
 
 model Medico {
@@ -31,7 +26,7 @@ model Medico {
   CPF       String @unique
   email     String @unique
   CRM       String @unique
-  telefone  Int
+  telefone  BigInt
 }
 
 model Gestor {
