@@ -13,7 +13,7 @@ model Usuario {
   nome      String
   sobrenome String
   idade     Int
-  cpf       String  @unique
+  CPF       String  @unique
   email     String  @unique
   telefone  BigInt?
 }
