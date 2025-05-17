@@ -59,25 +59,24 @@ app.post('/recuperarsenha', async (req, res) => {
   try {
     const { email, nova_senha, confirmar_senha } = req.body;
 
-    // 1) Verifica se as senhas batem
+    
     if (nova_senha !== confirmar_senha) {
       return res.status(400).send('A senha e sua confirmação não coincidem.');
     }
 
-    // 2) Busca o usuário pelo e-mail
     const user = await prisma.usuario.findUnique({ where: { email } });
     if (!user) {
       return res.status(404).send('E‑mail não cadastrado.');
     }
 
-    // 3) Gera hash e atualiza usando o id
+    
     const senhaHash = await bcrypt.hash(nova_senha, 10);
     await prisma.usuario.update({
       where: { id: user.id },
       data: { senha: senhaHash },
     });
 
-    // 4) Redireciona ao login
+    
     return res.redirect('/login');
   } catch (error) {
     console.error('Erro ao redefinir senha:', error);
