@@ -17,7 +17,7 @@ model Usuario {
   idade      Int
   CPF        String  @unique
   email      String  @unique
-  senha      String  @default("45666")
+  senha      String  
   telefone   BigInt?
 }
 
