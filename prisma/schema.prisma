@@ -17,7 +17,7 @@ model Usuario {
   idade      Int
   CPF        String  @unique
   email      String  @unique
-  telefone   Int?
+  telefone   BigInt?
 }
 
 model Medico {
@@ -28,7 +28,7 @@ model Medico {
   CPF        String   @unique
   email      String   @unique
   CRM        String   @unique
-  telefone   Int
+  telefone   BigInt
 }
 
 model Gestor {

@@ -3,6 +3,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { PrismaClient } from './generated/prisma/index.js'; 
 
+BigInt.prototype.toJSON = function() {
+  return this.toString();
+};
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -11,21 +15,34 @@ const prisma = new PrismaClient();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
 app.use('/view', express.static(path.join(__dirname, 'view')));
+
 
 app.get('/cadastro', (req, res) => {
   res.sendFile(path.join(__dirname, 'view', 'html', 'autenticacao', 'cadastro.html'));
+});
+
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'view', 'html', 'autenticacao', 'login.html'));
 });
 
 app.post('/usuarios', async (req, res) => {
   const { nome, sobrenome, idade, CPF, email, telefone } = req.body;
   console.log('Dados recebidos:', req.body);
 
+  const idadeInt = parseInt(idade, 10);
+
+  const telefoneBigInt = BigInt(telefone);
+
   try {
     const usuario = await prisma.usuario.create({
-      data: { nome, sobrenome, idade, CPF, email, telefone }
+      data: { nome, sobrenome, idade: idadeInt, CPF, email, telefone: telefoneBigInt }
     });
-    res.status(201).json(usuario);
+
+    res.redirect('/login');
   } catch (err) {
     res.status(400).json({ erro: 'Erro ao cadastrar usuário', detalhes: err.message });
   }
