@@ -17,6 +17,7 @@ model Usuario {
   idade      Int
   CPF        String  @unique
   email      String  @unique
+  senha      String  @default("45666")
   telefone   BigInt?
 }
 
@@ -27,6 +28,7 @@ model Medico {
   idade      Int
   CPF        String   @unique
   email      String   @unique
+  senha      String   @default("12345")
   CRM        String   @unique
   telefone   BigInt
 }
@@ -35,4 +37,6 @@ model Gestor {
   codigo     Int      @id  @default(autoincrement())
   nome       String
   sobrenome  String
+  email      String   @unique
+  senha      String   @default("09876")
 }
