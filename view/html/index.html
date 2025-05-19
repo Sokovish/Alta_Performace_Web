@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../../utils/img/index/logo.png">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Inicial</title>
 </head>
@@ -14,14 +16,14 @@
   <header>
     <nav>
       <div id="img_header">
-        <a href="index.html"><img src="/utils/img/farmacia.png" alt="Logo do site"></a>
+        <a href="index.html"><img src="../../utils/img/index/logo.png" alt="Logo do site"></a>
       </div>
       <ul id="nav_list">
         <li class="nav_item"><a href="">Início</a></li>
         <li class="nav_item"><a href="">Contato</a></li>
         <li class="nav_item"><a href="">Sobre nós</a></li>
         <div class="nav_item_login" id="login_cadastro">
-          <a href="/view/html/autenticacao/login.html">Login/Cadastro</a>
+          <a href="../html/autenticacao/login.html">Login/Cadastro</a>
         </div>    
       </ul>
       <button id="mobile_btn">
@@ -31,10 +33,11 @@
     <div id="mobile_menu">
       <ul id="mobile_navlist">
         <li class="nav_item"><a href="">Início</a></li>
-        <li class="nav_item"><a href="">Contato</a></li>
-        <li class="nav_item"><a href="">Sobre nós</a></li>
+        <li class="nav_item"><a href="#how-it-works">Como Funciona?</a></li>
+        <li class="nav_item"><a href="#partners">Nossos Parceiros</a></li>
+        <li class="nav_item"><a href="#contact">Fale Conosco</a></li>
         <div class="nav_item_login" id="login_cadastro_mobile">
-          <a href="/view/html/autenticacao/login.html">Login/Cadastro</a>
+          <a href="../html/autenticacao/login.html">Login/Cadastro</a>
         </div>    
       </ul>
     </div>
@@ -47,7 +50,7 @@
         <p>
           Somos uma plataforma que facilita o agendamento de consultas, conectando pacientes aos melhores médicos e hospitais parceiros. Nosso objetivo é trazer agilidade e segurança para o cuidado com sua saúde.
         </p>
-        <a class="btn" href="/view/html/autenticacao/cadastro.html">Cadastre-se Agora</a>
+        <a class="btn" href="#how-it-works">Como Funciona?</a>
       </div>
     </section>
 
@@ -57,20 +60,20 @@
         <p>Conheça os hospitais e clínicas que colaboram conosco para oferecer um atendimento de excelência.</p>
         <div class="partners-grid">
           <div class="partner">
-            <img src="/utils/img/hospital1.svg" alt="IOM">
+            <img src="../../utils/img/index/hospital1.png" alt="IOM">
             <p>Instituto de Olhos Maceió</p>
           </div>
           <div class="partner">
-            <img src="/utils/img/hospital2.png" alt="Clínica Vida">
-            <p>Clínica Vida</p>
+            <img src="/utils/img/index/hospital2.png" alt="MEDRADIUS">
+            <p>MedRadius</p>
           </div>
           <div class="partner">
-            <img src="/utils/img/hospital3.png" alt="Hospital Central">
-            <p>Hospital Central</p>
+            <img src="../../utils/img/index/hospital3.png" alt="UNIMED">
+            <p>UNIMED</p>
           </div>
           <div class="partner">
-            <img src="/utils/img/hospital4.png" alt="Hospital da Luz">
-            <p>Hospital da Luz</p>
+            <img src="/utils/img/index/hospital4.png" alt="SANTA LUZIA">
+            <p>Santa Luzia</p>
           </div>
         </div>
       </div>
@@ -81,9 +84,12 @@
         <h2>Como Funciona</h2>
         <div class="steps">
           <div class="step">
+           <a href="../html/autenticacao/login.html">
             <i class="fa-solid fa-user-plus"></i>
             <h3>Cadastre-se</h3>
             <p>Crie seu perfil de forma simples e rápida.</p>
+          </a> 
+           
           </div>
           <div class="step">
             <i class="fa-solid fa-calendar-check"></i>
@@ -108,7 +114,7 @@
             <cite>- Ana Paula</cite>
           </div>
           <div class="testimonial">
-            <p>"Estou muito satisfeito com o MedAgend. Consegui agendar uma consulta em poucos minutos e o suporte foi excelente."</p>
+            <p>"Estou muito satisfeito com o Sage Assistent. Consegui agendar uma consulta em poucos minutos e o suporte foi excelente."</p>
             <cite>- Carlos Eduardo</cite>
           </div>
         </div>
@@ -146,15 +152,10 @@
     </div>
   </footer>
 
-  <script src="/view/js/index.js"></script>
+  <script src="../js/index.js"></script>
   <script>
 
-    $('.btn').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: $('#how-it-works').offset().top
-      }, 800);
-    });
+   
   </script>
 </body>
 </html>

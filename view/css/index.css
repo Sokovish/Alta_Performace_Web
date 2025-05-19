@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #bddbfa;
 }
@@ -63,34 +66,6 @@ nav {
     transform: translateY(-20px);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 1170px) {
-    #nav_list {
-        display: none;
-    }
-    #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
-    #mobile_menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    #mobile_navlist {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0;
-        list-style: none;
-        text-align: center;
-    }
-}
 
 .container {
     max-width: 1200px;
@@ -148,6 +123,10 @@ nav {
     gap: 20px;
 }
 .partner {
+    display: flex; 
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-direction: column;
     background-color: #F1F5F9;
     border-radius: 10px;
     overflow: hidden;
@@ -208,6 +187,9 @@ nav {
 .step p {
     font-size: 1rem;
     color: #1d1d1dad;
+}
+.step a {
+    text-decoration: none;
 }
 
 #testimonials {
@@ -322,7 +304,34 @@ footer {
 .social-links a:hover {
     color: #FFC107;
 }
-
+@media screen and (max-width: 1170px) {
+    #nav_list {
+        display: none;
+    }
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #mobile_navlist {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0;
+        list-style: none;
+        text-align: center;
+    }
+}
 @media screen and (max-width: 768px) {
     .partners-grid,
     .steps {
