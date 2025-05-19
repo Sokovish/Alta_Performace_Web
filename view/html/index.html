@@ -3,54 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/view/css/reset.css">
-  <link rel="stylesheet" href="/view/css/index.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../../utils/img/index/logo.png">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Home</title>
 </head>
 <body>
 
   <header>
-      <nav>
-        <div id="img_header">
-          <a href="index.html"><img src="/utils/img/farmacia.png" alt="Logo do site"></a>
-        </div>
-
-        <ul id="nav_list">
-          <li class="nav_item active"><a href="">Inicio</a></li>
-          <li class="nav_item"><a href="">Contato</a></li>
-          <li class="nav_item"><a href="">Sobre nós</a></li>
-          <div class="nav_item_login" id="login_cadastro">
-            <a href="/view/html/autenticacao/login.html">Login/Cadastro</a>
-          </div>    
-        </ul>
-        
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-      </nav>
-
-      <div id="mobile_menu">
-          <ul id="mobile_navlist">
-            <li class="nav_item"><a href="">Inicio</a></li>
-            <li class="nav_item"><a href="">Contato</a></li>
-            <li class="nav_item"><a href="">Sobre nós</a></li>
-            <div class="nav_item_login" id="login_cadastro_mobile">
-              <a href="/view/html/autenticacao/login.html">Login/Cadstro</a>
-            </div>    
-        </ul>
+    <nav>
+      <div id="img_header">
+        <a href="index.html"><img src="../../utils/img/index/logo.png" alt="Logo do site"></a>
       </div>
+      <ul id="nav_list">
+        <li class="nav_item"><a href="#how-it-works">Como Funciona</a></li>
+        <li class="nav_item"><a href="#partners">Nossos Parceiros</a></li>
+        <li class="nav_item"><a href="#contact">Fale Conosco</a></li>
+        <div class="nav_item_login" id="login_cadastro">
+          <a href="../html/autenticacao/login.html">Login/Cadastro</a>
+        </div>    
+      </ul>
+      <button id="mobile_btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div id="mobile_menu">
+      <ul id="mobile_navlist">
+        <li class="nav_item"><a href="#how-it-works">Como Funciona?</a></li>
+        <li class="nav_item"><a href="#partners">Nossos Parceiros</a></li>
+        <li class="nav_item"><a href="#contact">Fale Conosco</a></li>
+        <div class="nav_item_login" id="login_cadastro_mobile">
+          <a href="../html/autenticacao/login.html">Login/Cadastro</a>
+        </div>    
+      </ul>
+    </div>
   </header>
 
   <main>
-      <section>
+    <section id="about">
+      <div class="container">
+        <h1>Bem-vindo a Sage Assistent</h1>
+        <p>
+          Somos uma plataforma que facilita o agendamento de consultas, conectando pacientes aos melhores médicos e hospitais parceiros. Nosso objetivo é trazer agilidade e segurança para o cuidado com sua saúde.
+        </p>
+        <a class="btn" href="#how-it-works">Como Funciona?</a>
+      </div>
+    </section>
 
-      </section>
+    <section id="partners">
+      <div class="container">
+        <h2>Hospitais Parceiros</h2>
+        <p>Conheça os hospitais e clínicas que colaboram conosco para oferecer um atendimento de excelência.</p>
+        <div class="partners-grid">
+          <div class="partner">
+            <img src="../../utils/img/index/hospital1.png" alt="IOM">
+            <p>Instituto de Olhos Maceió</p>
+          </div>
+          <div class="partner">
+            <img src="../..//utils/img/index/hospital2.png" alt="MEDRADIUS">
+            <p>MedRadius</p>
+          </div>
+          <div class="partner">
+            <img src="../../utils/img/index/hospital3.png" alt="UNIMED">
+            <p>UNIMED</p>
+          </div>
+          <div class="partner">
+            <img src="../../utils/img/index/hospital4.png" alt="SANTA LUZIA">
+            <p>Santa Luzia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2>Como Funciona</h2>
+        <div class="steps">
+          <div class="step">
+           <a href="../html/autenticacao/cadastro.html">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Cadastre-se</h3>
+            <p>Crie seu perfil de forma simples e rápida.</p>
+          </a> 
+           
+          </div>
+          <div class="step">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Agende Consultas</h3>
+            <p>Escolha o médico e o hospital no horário que melhor se adapte à sua rotina.</p>
+          </div>
+          <div class="step">
+            <i class="fa-solid fa-hospital-user"></i>
+            <h3>Atendimento de Qualidade</h3>
+            <p>Receba atendimento com profissionais de referência e infraestrutura de ponta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <h2>O que nossos usuários dizem</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial">
+            <p>"Marcar minha consulta nunca foi tão fácil! A plataforma é intuitiva, e os hospitais parceiros oferecem um atendimento excepcional."</p>
+            <cite>- Ana Paula</cite>
+          </div>
+          <div class="testimonial">
+            <p>"Estou muito satisfeito com o Sage Assistent. Consegui agendar uma consulta em poucos minutos e o suporte foi excelente."</p>
+            <cite>- Carlos Eduardo</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <p>Tem dúvidas ou precisa de mais informações? Envie sua mensagem e nossa equipe responderá o mais breve possível.</p>
+        <form id="contact-form" action="/enviar-contato" method="post">
+          <div class="form-group">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Seu Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Sage Assistent - Todos os direitos reservados</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
   </footer>
-  <script src="/view/js/index.js"></script>
+
+  <script src="../js/index.js"></script>
+  <script>
+
+   
+  </script>
 </body>
 </html>
