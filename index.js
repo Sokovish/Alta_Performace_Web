@@ -39,6 +39,7 @@ app.post('/usuarios', async (req, res) => {
   const telefoneBigInt = BigInt(telefone);
 
   try { 
+    // criptografando senha
     const senhaHash= await bcrypt.hash(senha,10)
     const usuario = await prisma.usuario.create({
       data: { nome, sobrenome, idade: idadeInt, CPF, email,senha : senhaHash, telefone: telefoneBigInt }
