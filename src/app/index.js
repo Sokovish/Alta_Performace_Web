@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import bcrypt from 'bcrypt';
 import { fileURLToPath } from 'url';
-import { PrismaClient } from './generated/prisma/index.js'; 
+import { PrismaClient } from '../../generated/prisma/index.js';
 
 BigInt.prototype.toJSON = function() {
   return this.toString();
@@ -16,7 +16,6 @@ const prisma = new PrismaClient();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 
 app.use('/view', express.static(path.join(__dirname, 'view')));
 
